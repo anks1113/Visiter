@@ -1,0 +1,407 @@
+<html>
+<head>
+    <Title>Visiter</Title>   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            overflow-x: hidden;
+             margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+        }
+        
+        .header{
+  height:80px;
+            position: relative;
+             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+}
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+         .footer{
+            background-color:rgba(0,0,0,0.6);
+            height: 500px;
+            margin-top: 50px;
+            color: white;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .middle{
+            padding-left: 300px;
+            float: left;
+        }
+        .bk:hover{
+         cursor: pointer;
+            color: dodgerblue;
+        }
+        .icn:hover{
+       opacity: 0.5;
+        }
+        
+        .bd{
+              background: #f1f5f8;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  
+}
+        .op{
+             box-sizing: border-box; border: 1px solid #556B2F;
+            height: 8px;width: 5px;border-radius: 8px;padding: 10px;
+            font-size: 20px; color: #556B2F; font-weight: bold;text-decoration: none;
+     
+}
+        .op:hover{
+        background-color: #556B2F;
+            color: white;
+        }
+        .image{
+            margin-left:40px;
+            display: flex;
+              overflow-y: hidden;
+        }
+        .image::-webkit-scrollbar {
+  display: none;
+}
+
+
+        .card {
+            margin-right:20px;
+            background: rgba(85,107,47,0.4);
+            font-weight: bold;
+  text-align: center;
+            height: 330px;
+            color: white;
+             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2); 
+        
+}
+          .card2 {
+            margin-right:20px;
+            background: rgba(85,107,47,0.4);
+            font-weight: bold;
+  text-align: center;
+            height: 370px;
+            color: white;
+               box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2); 
+        
+}
+        
+        .genre{
+            height: 530px;
+            font-weight: bold;
+            margin-top: 50px;
+            text-align: center;
+            transition: .6s ease-in-out;
+             transform: scale(1);
+              position: relative;
+  animation-name: animatetop;
+  animation-duration: 1s;
+        }
+      .genre:hover{
+ transform: scale(1.1);
+        }
+        
+        .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 450;
+  width: 420;
+  margin-left:30px;             
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.7);
+}
+        .overlay:hover{
+         opacity: 1;
+        }
+                .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+}
+        .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+        .prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+        }
+        
+        .l{
+				display: relative;
+				font-size: 20px;
+				transition: font-size 500ms;
+				color: #556B2F;
+             padding: 10px 35px;
+				text-decoration: none;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				font-weight: bold;
+            transition:0.5s;
+			}
+        
+        .l:hover {
+        border-top: 2px solid #556B2F;
+        border-bottom: 2px solid #556B2F;
+      }
+      
+        .block{
+            height: 580px;
+            background: black;
+            color: white;
+            display: flex;
+        }
+    
+    @keyframes animatetop{
+        from {top:100px; opacity:0}
+  to {top:0; opacity:1}
+    }
+        .hide {
+  opacity: 0;
+  top: -30%;
+}
+.show {
+  opacity: 1;
+  top: 0;
+}
+        
+        .block1{
+            height: 100px;
+            background: black;
+            margin-top: 40px;
+            color: white;
+        }
+        .mySlides {display:inline-block;}
+  
+        .slideshow-container {
+ max-width: 95%;
+            margin-top:30px;
+            margin-left: 40px;
+            position: relative;
+}
+        .active {
+  background-color: #717171;
+}
+        .text {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+            font-weight: bold;
+}
+
+      </style>
+</head>
+    <body class="bd">
+          <div class="header">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="logo"  style="float:left; position:absolute;top: 0; height:175px; width:200px; margin-top: -40px; margin-left: 20px;cursor: pointer"></a>
+            <div style="float: right; margin-top: 20px;" >
+            
+                <a href="index.html" class="l">Home</a>
+  <a href="Spritual.html" class="l" >Spritual</a>
+  <a href="ContactUs.html" class="l">Contact</a>
+  <a href="AboutUs.html" class="l">About</a>
+  <a href="FeedbackForm.php" class="l">Feedback</a>
+              </div></div>
+    <div  style="margin-top: 25px">
+    <a href="ThingsToDo.html" class="op " style="margin-left: 120px">Thing's to Do...
+    </a>
+  <a href="Fort%20and%20Palaces.html" class="op " style="margin-left: 80px">Fort and Palaces
+  </a>
+  <a href="Scary%20Places.html" class="op " style="margin-left: 80px">Scary Places</a>
+  <a href="StatueOfUnity.html" class="op " style="margin-left: 80px">Statue Of Unity</a>
+  <a href="FeedbackForm.html" class="op " style="margin-left: 80px">Feedback Form
+        <i class="material-icons" style="margin-left: 15px ">forum</i></a>
+        </div>
+       <div class="slideshow-container">
+              <div class="mySlides dot ">
+  <img src="images/thikse.jpg" style="width:100%; height:75%">
+  <div class="text">Thikse Monastry, Ladakh</div>
+</div>
+
+<div class="mySlides dot ">
+  <img src="images/KeralaBackWater.jpg" style="width: 100%; height:75%">
+  <div class="text">Back Water, Kerala</div>
+</div>
+
+<div class="mySlides dot ">
+  <img src="images/LaitlumCanyons.jpeg" style="width:100%; height:75% ">
+  <div class="text">Laitlum Canyon, Meghalaya</div>
+                  </div>
+<div class="mySlides dot ">
+  <img src="images/AndamanNico.jpg" style="width:100%; height:75% ">
+  <div class="text" style="color: grey">Andaman and Nicobar Island</div>
+                  </div>                  
+                  </div>
+                  
+        <h1 style="margin-left: 40px">Destinations travellers love</h1>
+        <div class="image ">
+        <div class="card">
+        <img src="images/image.jpg" height="250" width="350 " style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Goa</h3></div>
+             <div class="card" style="margin-left:30px ">
+        <img src="images/agra.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Agra</h3></div>
+                    <div class="card" style="margin-left:30px ">
+        <img src="images/delhi.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3 >Delhi</h3></div>
+                    <div class="card" style="margin-left:30px ">
+        <img src="images/Kochi%20.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Kochi</h3></div>
+                    <div class="card" style="margin-left:30px ">
+        <img src="images/Mumbai.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Mumbai</h3></div>
+                    <div class="card" style="margin-left:30px ">
+        <img src="images/srinagar.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Srinagar</h3></div>
+             </div>
+             <div class="block1">
+                 <h1 style="margin-left: 40px;padding-top: 10px">Experience the world</h1>
+                 <h4 style="margin-left:40px;margin-top: -25px ">Get exposed to the world...</h4>
+              </div>
+            <div class="block">
+                <div class="genre hide" id="myID1" style="padding-left: 30px">
+                    <a href="Heritage.html" style="text-decoration: none; color: white"> 
+                       <img src="images/heritage1.jpg" height="450" width="420" style="border-radius: 10px" >
+                          <div class="overlay"> <h2 style="position: absolute;top: 50%;left: 40%;font-weight: 500;letter-spacing: 0.15em;text-transform: uppercase; color: white;">        Heritage</h2></div></a></div>
+                 <div class="genre hide"  id="myID2" style="padding-left: 80px;">
+                     <a href="Spritual.html"  style="text-decoration: none; color: white">
+                         <img src="images/Spiritual.jpg" height="450" width="420" style="border-radius: 10px" >
+                            <div class="overlay" style="padding-left: 80px">        <h2 style="position: absolute;top: 50%;left: 40%;font-weight: 500;letter-spacing: 0.15em;text-transform: uppercase; color: white;"> Spiritual</h2></div></a></div>
+                 <div class="genre hide" id="myID3"style="padding-left: 80px;" >
+                      <a href="Spritual.html"  style="text-decoration: none; color: white">
+                         <img src="images/BeachSlide.jpg" height="450" width="420" style="border-radius: 10px" >
+                            <div class="overlay" style="padding-left: 80px">        <h2 style="position: absolute;top: 50%;left: 40%;font-weight: 500;letter-spacing: 0.15em;text-transform: uppercase; color: white;"> Beaches</h2></div></a>
+                </div>
+        </div> 
+        
+        <h1 style="margin-left: 40px;margin-top: 50px">Mesmerising India</h1>
+         <div class="image ">
+        <div class="card2">
+        <img src="images/LadakhBanner.jpg" height="250" width="350 " style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Ladakh Valley</h3><h2 style="color: #556b2f;margin-top: -15px">Ladakh</h2></div>
+             <div class="card2" style="margin-left:30px ">
+        <img src="images/DwakiBanner.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Umngot River</h3><h2 style="color: #556b2f;margin-top: -15px">Meghalaya</h2> </div>
+                   
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/KanykumariBanner.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3 >Splendid Seashore</h3><h2 style="color: #556b2f;margin-top: -15px">Kanyakumari</h2></div>
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/VaranasiBanner.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Ganga Aarti</h3><h2 style="color: #556b2f;margin-top: -15px">Varanasi</h2></div>
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/DzukuValleyBanner.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Dzuko Valley</h3><h2 style="color: #556b2f;margin-top: -15px">Nagaland</h2></div>
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/CampbellBay.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Campbell Bay</h3><h2 style="color: #556b2f;margin-top: -15px">Andaman and Nicobar</h2></div>
+              <div class="card2" style="margin-left:30px ">
+        <img src="images/Zuluk.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3 >Zuluk</h3><h2 style="color: #556b2f;margin-top: -15px">Sikkim</h2></div>
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/WesternGhat.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Western Ghat</h3><h2 style="color: #556b2f;margin-top: -15px">Karnataka</h2></div>
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/Suderban.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Sunderban Wetland</h3><h2 style="color: #556b2f;margin-top: -15px">West Bengal</h2></div>
+                    <div class="card2" style="margin-left:30px ">
+        <img src="images/Mannar.jpg" height="250" width="350" style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+            <h3>Munnar</h3><h2 style="color: #556b2f;margin-top: -15px">Kerala</h2></div>
+             </div>  
+        <div class="footer">
+           <div class="left">
+            <h3 style="padding-top: 30px;margin-left: 160px">Contact Details</h3>
+            <h3 style="margin-left: 160px">Visiter <br>Rajendra Nagar, Satna<br>Madhya Pradesh, India</h3>
+            <h3 style="margin-left: 160px">Phone no. : 0123456789</h3>
+            <h3 style="margin-left: 160px">Email : anks1113@gmail.com</h3>
+            </div>  
+            <div class="middle">
+                <a href="Spritual.html"><h3 style="padding-top: 30px" class="bk">Spritual Places</h3></a>
+                <a href="Islam.html"><h3 style="margin-top: -10px" class="bk">Islam</h3></a>
+                <a href="Hinduism.html"><h3 style="margin-top: -10px" class="bk">Hinduism</h3></a>
+                <a href="Christianity.html"><h3 style="margin-top: -10px" class="bk">Christianity</h3></a>
+                <a href="Sikhism.html"><h3 style="margin-top: -10px" class="bk">Sikhism</h3></a>
+                <a href="Buddhism.html"><h3 style="margin-top: -10px" class="bk">Buddhism</h3></a>
+                <a href="Jainism.html"><h3 style="margin-top: -10px" class="bk">Jainism</h3></a>
+            </div>
+           
+            <div class="right">
+                <a href="Heritage.html"> <h3 style="padding-top: 30px;margin-right: 160px" class="bk">Heritage</h3></a>
+                <a href="StatueOfUnity.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Statue of Unity</h3></a>
+                <a href="Beaches.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Beaches</h3></a>
+                <a href="Fort%20and%20Palaces.html">  <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Fort and Places</h3></a>
+                <a href="ThingsToDo.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Things to Do...</h3></a>
+                <a href="Scary%20Places.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Scary Places</h3></a>
+        </div>
+            <div style="clear: both;margin-left:200px;">
+                 <img src="images/logo_transparent.png" alt="logo" width="200" height="175" style="float: left;margin-top: -40px;">
+                <p style="padding-top: 25px;font-size: 20px;"><i>Travel thy way, Tranquil thy soul...</i></p>
+                <p style="margin-left:280px;padding-top: 10px ">Please send us your ideas, bug reports, suggestions! Any feedback would be appreciated.</p>
+            </div>
+            <div  style="  margin-left: 160px;margin-top: -20px; clear: both">
+               © 2021 Visiter - All Rights Reserved 
+               <div style="float: right;margin-right: 160px">
+                 <a href="https://www.facebook.com/">
+                   <i class="fa fa-facebook-square icn" style="font-size:28px"></i></a>
+                   <a href="https://twitter.com/"><i class="fa fa-twitter icn" style="font-size:28px;padding-left: 10px"></i></a>
+                   <a href="https://www.instagram.com/"> <i class="fa fa-instagram icn" style="font-size:28px;padding-left: 10px"></i></a>
+                   <a href="https://www.google.com/"><i class="fa fa-google plus icn" style="font-size:28px;padding-left: 10px"></i></a>
+                   <a href="https://www.reddit.com/"><i class="fa fa-reddit icn" style="font-size:28px;padding-left: 10px"></i></a>
+                </div>
+            </div>
+        </div>          
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    
+    //on-scroll
+    
+
+var myScrollFunc = function() {
+    for(var x =1;x<4;x++){
+    myID =document.getElementById("myID"+x);
+  var y = window.scrollY;
+  if (y >= 700) {
+    myID.className = "genre show"
+  } else {
+    myID.className = "genre hide"
+  }
+    }
+};
+
+window.addEventListener("scroll", myScrollFunc); 
+</script>
+        
+    </body>    
+</html>

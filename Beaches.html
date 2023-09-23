@@ -1,0 +1,383 @@
+<html>
+    <head>
+        <title>Beaches</title>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+            margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+                overflow-x: hidden;
+            }
+              .header{
+  height:80px;
+            position: relative;
+             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+}
+            
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+         .footer{
+            background-color:rgba(0,0,0,0.6);
+            height: 500px;
+            margin-top: 50px;
+            color: white;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .middle{
+            padding-left: 300px;
+            float: left;
+        }
+        .bk:hover{
+         cursor: pointer;
+            color: dodgerblue;
+        }
+        .icn:hover{
+       opacity: 0.5;
+        }
+            
+                 .bd{
+              background: #f1f5f8;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  
+}
+                
+              .onImage{
+                
+                position: absolute;
+             color: white;
+                margin-left: 168px;
+                  margin-top: -400px;
+            background-color: rgba(85,107,47);
+                  text-align: center;
+                  border-radius: 7px;
+                     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+} 
+            
+      .l{
+				display: relative;
+				font-size: 20px;
+				transition: font-size 500ms;
+				color: #556B2F;
+             padding: 10px 35px;
+				text-decoration: none;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				font-weight: bold;
+            transition:0.5s;
+			}
+        .l:hover {
+        border-top: 2px solid #556B2F;
+        border-bottom: 2px solid #556B2F;
+      }
+                        
+            .container {
+  position: relative;
+} 
+            .opaq{
+                background: rgba(0,0,0,0.9);
+            }
+            .bgText{
+         /* Fallback color */
+  background-color: rgba(85,107,47, 0.4); /* Black w/opacity/see-through */
+  color: white;
+    margin-top: 100px;
+        height: 320;        
+            }
+             .card {
+            margin-right:20px;
+            font-weight: bold;
+            height: 350px;
+                    background-color: rgba(85,107,47,0.4);
+                width:420px;
+                  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+        }
+        .modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+            .modal-content {
+  position: relative;
+  background-color:rgba(255,255,255,0.9);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: #556B2F;
+                font-size: 20px;
+}
+            .ani{position: relative;
+                animation-name: animatetop;
+            animation-duration: 0.6s;
+            }
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #556B2F;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+            button{ border: none;outline: none;background: none; color: blue;font-weight: bold;}
+            button:hover{
+                 color: #556B2F;
+                cursor: pointer;
+            }
+            
+            b{color: #556B2F}
+        
+            .cardBanner {
+            margin-right:20px;
+            background: white;
+            font-weight: bold;
+            text-align: center;
+            height: 500px;
+                width: 400px;
+            color: white;
+            margin-top: 40px;    
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}  
+            .cardProduct{
+                     margin-right:20px;
+            background: white;
+            font-weight: bold;
+            text-align: center;
+            height: 400px;
+                width: 600px;
+            color: white;
+                margin-left: 40px;
+                margin-top: -30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+        </style>
+    </head>
+    <body class="bd">
+         <div class="header" >
+       <a href="index.html">
+                <img src="images/logo_transparent.png" alt="logo"  style="float:left; position:absolute;top: 0; height:175px; width:200px; margin-top: -40px; margin-left: 20px;cursor: pointer"></a>
+            <div style="float: right; margin-top: 20px;" >
+            
+                <a href="index.html" class="l">Home</a>
+  <a href="Spritual.html" class="l" >Spritual</a>
+  <a href="ContactUs.html" class="l">Contact</a>
+  <a href="AboutUs.html" class="l">About</a>
+  <a href="FeedbackForm.html" class="l">Feedback</a>
+              </div></div>
+              <div style="display: flex;margin-left: 150px;" class="ani">
+            <div class="cardBanner" style="transform: rotateZ(-5deg);">
+        <img src="images/BeachBanner1.jpg" height="420" width="340 " style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+         <h1 style="color: #556B2F;font-size: 30;margin-top:5px ">Beaches</h1>
+     </div>  
+               <div class="cardBanner" style="transform: rotate(1deg); ">
+        <img src="images/BeachBanner2.jpg" height="420" width="340 " style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+                   <h1 style="color: #556B2F;font-size: 30;margin-top:5px ">Beaches</h1>
+                  </div> 
+                  <div class="cardBanner" style="transform: rotate(12deg);">
+        <img src="images/BeachBanner3.jpg" height="420" width="340 " style="margin-top: 20px; margin-left: 20px;margin-right: 20px">
+                  <h1 style="color: #556B2F;font-size: 30;margin-top:5px">Beaches</h1>
+                  </div>
+                    </div>    
+        <p style="margin: 50px;text-align: center; font-size: 20;margin-top:50px; color:#556B2F">
+            
+India is blessed with heritage riches and a regal lineage. Vestiges of Indian royalty can be felt in the various forts and palaces speckled across the country. From hill forts in Rajasthan to formidable fortifications in Gwalior, Golconda and Delhi, the history of India stands tall and proud, housed inside these marvellous structures. To experience how the royalty lived in the past, several of these palace-turned heritage hotels are a must-visit.</p>
+ <p style="margin: 50px;text-align: center; font-size: 20;color:#556B2F;margin-top: -20px">Visiting these forts and palaces is the best way to uncover a real treasure of Indian history. These serve as great reminders of the bygone eras, mystical kingdoms and their rulers. 
+        </p>
+        <div class="bgText">
+        <div class="cardProduct" style="float: left;transform: rotate(-3deg);">
+            <img src="images/RadhanagarBeach.jpg" height="300" width="550" style="margin-top: 20px; margin-left: 20px;margin-right: 20px;">
+            <h1 style="color: #556B2F;font-size: 27;margin-top:15px ">Radha Nagar Beach, Havelock Island</h1>
+            </div>
+            <p style="text-align: center; font-size: 22;color:white;padding-right:20px;padding-top: 20px">Radhanagar Beach is one of the most famous attractions in Havelock Island and the Andaman and Nicobar Islands itself. Commonly known as Beach No. 7, Radhanagar has been given the title of the best beach in Asia and the 7th best beach in the world by Time Magazine in 2004. Needless to say, it is one of the most spectacular beaches you will visit on your trip to Andaman. Hugged with Coconut trees from all sides and covered with tropical jungle from both the sides, the Radhanagar Beach opens up a world of complete serenity and relaxation for its visitors.</p>
+         </div>
+<div class="bgText">
+        <div class="cardProduct" style="float: left;transform: rotate(1deg);">
+            <img src="images/calanguteBeach.jpg" height="300" width="550" style="margin-top: 20px; margin-left: 20px;margin-right: 20px;">
+            <h1 style="color: #556B2F;font-size: 27;margin-top:15px ">Calangute Beach, Goa</h1>
+            </div>
+            <p style="text-align: center; font-size: 22;color:white;padding-right:20px;padding-top: 20px">Fondly called the queen of beaches by locals, Calangute Beach is among the most popular beaches in Goa, attracting large crowds throughout the year.The beach is the largest in North Goa and visited by thousands of domestic and international tourists alike. The peak tourist season is during Christmas and New Year, and during the summer in May. The village of Calangute is equipped with all basic facilities a traveller would need, including banks, foreign exchange offices, Internet cafes, hotels and resorts, eateries and hospitals.</p>
+         </div>
+         <div class="bgText">
+        <div class="cardProduct" style="float: left;transform: rotate(4deg);">
+            <img src="images/KadmatBeach.jpg" height="300" width="550" style="margin-top: 20px; margin-left: 20px;margin-right: 20px;">
+            <h1 style="color: #556B2F;font-size: 27;margin-top:15px ">Kadmat Beach, Lakshadweep</h1>
+            </div>
+            <p style="text-align: center; font-size: 22;color:white;padding-right:20px;padding-top: 20px">Also know as cardamom island, Kadmat is a coral island that belongs to the Amindivi sub-group of Lakshadweep islands. It is surrounded by spectacular and large lagoons on the eastern and the western sides, with long, sandy beaches, an invaluable wealth of coral habitats and reef banks making it one of the most attractive tourist stopovers in Lakshadweep. The island abounds in flora and fauna, which can be explored through sports like scuba diving, kayaking, snorkelling etc. Tourists can spend time at the lavish Kadmat Island Beach Resort, for an immersive experience.</p>
+         </div>
+         <div class="bgText">
+        <div class="cardProduct" style="float: left;transform: rotate(-6deg);">
+            <img src="images/MarinaBeach.jpg" height="300" width="550" style="margin-top: 20px; margin-left: 20px;margin-right: 20px;">
+            <h1 style="color: #556B2F;font-size: 27;margin-top:15px ">Marina Beach, Chennai</h1>
+            </div>
+            <p style="text-align: center; font-size: 22;color:white;padding-right:20px;padding-top: 20px">Often considered to be the pride of Chennai, Marina Beach, 13 km in length, is the second-longest beach of its kind in the world. A long stretch of soft sand, Marina Beach invites tourists to unwind, take a dip in the water and indulge in local snacks. The street facing the beach is lined with one illustrious landmark after another. These include Madras University, Government departments, Senate House, Presidency College, Cricket Stadium and Swami Vivekananda Memorial House and the building of All India Radio. Sunrises and pony rides can also be enjoyed here.</p>
+         </div>
+        <h1 style="margin: 40px;text-align: center;color: #556B2F;margin-top: 100">Popular Beach Around India</h1>
+        <div style="display: flex;margin-left:60px ">
+            <div class="card" style="margin-top: 100px">
+            <img src="images/NileIsland.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+                <h1 style="text-align: center;color: white;padding-top: 10px">Bharathpur Beach</h1>
+                <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Neill Island<br>Andaman and Nicobar Island</h2>
+            </div>
+            <div class="card" style="margin-top: 100px;margin-left: 40px;">
+            <img src="images/VagatorBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+             <h1 style="text-align: center;color: white;padding-top: 10px">Vagator Beach</h1>
+             <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Goa</h2>
+            </div>
+            <div class="card" style="margin-top: 100px;margin-left: 40px">
+            <img src="images/BangaramBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+             <h1 style="text-align: center;color: white;padding-top: 10px">Bangaram Beach</h1>
+             <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Bangaram Island<br>Lakshadweep</h2>
+            </div>
+        </div>
+        <div style="display: flex;margin-left:60px ">
+            <div class="card" style="margin-top: 160px">
+                <img src="images/DighaBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+                 <h1 style="text-align: center;color: white;padding-top: 10px">Digha Beach</h1>
+                 <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Digha<br>West Bengal</h2>
+                </div>
+             <div class="card" style="margin-top: 160px;margin-left: 40px">
+            <img src="images/BagaBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+            <h1 style="text-align: center;color: white;padding-top: 10px">Baga Beach</h1>
+            <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Goa</h2>
+            </div>      
+             <div class="card" style="margin-top: 160px;margin-left: 40px">
+            <img src="images/KovalamBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+             <h1 style="text-align: center;color: white;padding-top: 10px">Kovalam Beach </h1>
+             <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Kovalam<br>Kerala</h2>
+            </div>     
+           </div>
+           <div style="display: flex;margin-left:60px ">
+            <div class="card" style="margin-top: 160px">
+                <img src="images/RushikondaBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+                 <h1 style="text-align: center;color: white;padding-top: 10px">Rushikonda Beach</h1>
+                 <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Visakhapatnam<br>Andhra Pradesh</h2>
+                </div>
+             <div class="card" style="margin-top: 160px;margin-left: 40px">
+            <img src="images/PuriBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+                         <h1 style="text-align: center;color: white;padding-top: 10px">Golden Beach</h1>
+                         <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Puri<br>Odisha</h2>
+            </div>
+             <div class="card" style="margin-top: 160px;margin-left: 40px">
+            <img src="images/VarkalaBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+             <h1 style="text-align: center;color: white;padding-top: 10px">Varkala Beach</h1>
+             <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Varkala<br>Kerala</h2>
+            </div>     
+           </div>
+            <div style="display: flex;margin-left:60px ">
+            <div class="card" style="margin-top: 160px">
+                <img src="images/pololemBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+                 <h1 style="text-align: center;color: white;padding-top: 10px">Pololem Beach</h1>
+                 <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Goa</h2>
+                </div>
+             <div class="card" style="margin-top: 160px;margin-left: 40px">
+            <img src="images/DiuBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+             <h1 style="text-align: center;color: white;padding-top: 10px">Diu Beach</h1>
+             <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Diu<br>Daman and Diu</h2>
+            </div>
+             <div class="card" style="margin-top: 160px;margin-left: 40px">
+            <img src="images/KappadBeach.jpg" height="250" width="400" style="padding-left: 10px;margin-top: -80px">
+             <h1 style="text-align: center;color: white;padding-top: 10px">Kappad Beach</h1>
+             <h2 style="text-align: center;color: #556B2F;margin-top: -10px">Kozhikode<br>Kerala</h2>
+            </div>     
+           </div>
+            <div class="footer">
+           <div class="left">
+            <h3 style="padding-top: 30px;margin-left: 160px">Contact Details</h3>
+            <h3 style="margin-left: 160px">Visiter <br>Rajendra Nagar, Satna<br>Madhya Pradesh, India</h3>
+            <h3 style="margin-left: 160px">Phone no. : 0123456789</h3>
+            <h3 style="margin-left: 160px">Email : anks1113@gmail.com</h3>
+            </div>  
+            <div class="middle">
+                <a href="Spritual.html"><h3 style="padding-top: 30px" class="bk">Spritual Places</h3></a>
+                <a href="Islam.html"><h3 style="margin-top: -10px" class="bk">Islam</h3></a>
+                <a href="Hinduism.html"><h3 style="margin-top: -10px" class="bk">Hinduism</h3></a>
+                <a href="Christianity.html"><h3 style="margin-top: -10px" class="bk">Christianity</h3></a>
+                <a href="Sikhism.html"><h3 style="margin-top: -10px" class="bk">Sikhism</h3></a>
+                <a href="Buddhism.html"><h3 style="margin-top: -10px" class="bk">Buddhism</h3></a>
+                <a href="Jainism.html"><h3 style="margin-top: -10px" class="bk">Jainism</h3></a>
+            </div>
+           
+            <div class="right">
+                <a href="Heritage.html"> <h3 style="padding-top: 30px;margin-right: 160px" class="bk">Heritage</h3></a>
+                <a href="StatueOfUnity.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Statue of Unity</h3></a>
+                <a href="Beaches.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Beaches</h3></a>
+                <a href="Fort%20and%20Palaces.html">  <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Fort and Places</h3></a>
+                <a href="ThingsToDo.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Things to Do...</h3></a>
+                <a href="Scary%20Places.html"> <h3 style="margin-right: 160px;margin-top: -10px" class="bk">Scary Places</h3></a>
+        </div>
+            <div style="clear: both;margin-left:200px;">
+                 <img src="images/logo_transparent.png" alt="logo" width="200" height="175" style="float: left;margin-top: -40px;">
+                <p style="padding-top: 25px;font-size: 20px;"><i>Travel thy way, Tranquil thy soul...</i></p>
+                <p style="margin-left:280px;padding-top: 10px ">Please send us your ideas, bug reports, suggestions! Any feedback would be appreciated.</p>
+            </div>
+            <div  style="  margin-left: 160px;margin-top: -20px; clear: both">
+               © 2021 Visiter - All Rights Reserved 
+               <div style="float: right;margin-right: 160px">
+                 <a href="https://www.facebook.com/">
+                   <i class="fa fa-facebook-square icn" style="font-size:28px"></i></a>
+                   <a href="https://twitter.com/"><i class="fa fa-twitter icn" style="font-size:28px;padding-left: 10px"></i></a>
+                   <a href="https://www.instagram.com/"> <i class="fa fa-instagram icn" style="font-size:28px;padding-left: 10px"></i></a>
+                   <a href="https://www.google.com/"><i class="fa fa-google plus icn" style="font-size:28px;padding-left: 10px"></i></a>
+                   <a href="https://www.reddit.com/"><i class="fa fa-reddit icn" style="font-size:28px;padding-left: 10px"></i></a>
+                </div>
+            </div>
+        </div>  
+        <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var modal = document.getElementById("myModal2");
+var btn = document.getElementById("myBtn2");
+            var span = document.getElementsByClassName("close");
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+    </body>
+</html>
